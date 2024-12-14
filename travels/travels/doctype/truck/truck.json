@@ -1,0 +1,143 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "prompt",
+ "creation": "2024-12-08 18:36:12.881901",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "disabled",
+  "section_break_urzf",
+  "truck_number",
+  "image",
+  "acquisition_odometer_reading",
+  "column_break_wxnc",
+  "make",
+  "model",
+  "section_break_hxyq",
+  "fuel_type",
+  "last_odometer_reading",
+  "column_break_ronn",
+  "fuel_uom",
+  "transportation_default_tab",
+  "truck_driver",
+  "column_break_qwrx",
+  "drivers_name"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled?"
+  },
+  {
+   "fieldname": "section_break_urzf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "truck_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Truck Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach",
+   "label": "Image"
+  },
+  {
+   "fieldname": "column_break_wxnc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "make",
+   "fieldtype": "Data",
+   "label": "Make"
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "label": "Model"
+  },
+  {
+   "fieldname": "acquisition_odometer_reading",
+   "fieldtype": "Data",
+   "label": "Acquisition Odometer Reading"
+  },
+  {
+   "fieldname": "section_break_hxyq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fuel_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Fuel Type",
+   "options": "Petrol\nDiesel",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_odometer_reading",
+   "fieldtype": "Data",
+   "label": "Last Odometer Reading"
+  },
+  {
+   "fieldname": "column_break_ronn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fuel_uom",
+   "fieldtype": "Link",
+   "label": "Fuel UOM",
+   "options": "UOM"
+  },
+  {
+   "fieldname": "transportation_default_tab",
+   "fieldtype": "Tab Break",
+   "label": "Transportation Default"
+  },
+  {
+   "fieldname": "truck_driver",
+   "fieldtype": "Link",
+   "label": "Truck Driver",
+   "options": "Truck Driver"
+  },
+  {
+   "fieldname": "column_break_qwrx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "truck_driver.full_name",
+   "fieldname": "drivers_name",
+   "fieldtype": "Data",
+   "label": "Driver's Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-08 18:58:00.923481",
+ "modified_by": "Administrator",
+ "module": "Travels",
+ "name": "Truck",
+ "naming_rule": "Set by user",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

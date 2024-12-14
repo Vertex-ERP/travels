@@ -1,0 +1,151 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "TB.#####",
+ "creation": "2024-12-08 19:37:28.482524",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_3wsm",
+  "amended_from",
+  "truck",
+  "trip",
+  "start_location",
+  "destination_location",
+  "column_break_lofq",
+  "driver",
+  "passenger_details_section",
+  "passenger_table",
+  "parcel_details_section",
+  "parcel_table",
+  "section_break_zmir",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_3wsm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Travel Booking",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "truck",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Truck",
+   "options": "Truck",
+   "reqd": 1
+  },
+  {
+   "fieldname": "trip",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Trip",
+   "options": "Trip Routes",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "trip.starting_point",
+   "fieldname": "start_location",
+   "fieldtype": "Data",
+   "label": "Start Location"
+  },
+  {
+   "fetch_from": "trip.ending_point",
+   "fieldname": "destination_location",
+   "fieldtype": "Data",
+   "label": "Destination Location"
+  },
+  {
+   "fieldname": "column_break_lofq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "driver",
+   "fieldtype": "Link",
+   "label": "Driver",
+   "options": "Truck Driver"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "passenger_details_section",
+   "fieldtype": "Section Break",
+   "label": "Passenger Details"
+  },
+  {
+   "fieldname": "passenger_table",
+   "fieldtype": "Table",
+   "label": "Passenger Table",
+   "options": "Passenger Table"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "parcel_details_section",
+   "fieldtype": "Section Break",
+   "label": "Parcel Details"
+  },
+  {
+   "fieldname": "parcel_table",
+   "fieldtype": "Table",
+   "label": "Parcel Table",
+   "options": "Parcel Table"
+  },
+  {
+   "fieldname": "section_break_zmir",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Project",
+   "link_fieldname": "travel_booking"
+  },
+  {
+   "link_doctype": "Sales Invoice",
+   "link_fieldname": "travel_booking"
+  },
+  {
+   "link_doctype": "Expense Claim",
+   "link_fieldname": "travel_booking"
+  }
+ ],
+ "modified": "2024-12-09 10:09:24.122226",
+ "modified_by": "Administrator",
+ "module": "Travels",
+ "name": "Travel Booking",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
